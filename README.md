@@ -9,8 +9,41 @@
 - Uso de git para poder clonar el proyecto
 
 ## Configuracion del proyecto
-1. Clone el repositorio
-Para clonarlo debe utilizar git y ejecutar el siguiente comando en xampp/htdocs/
+1. Debes clonar el respositorio debe utilizar git y ejecutar el siguiente comando en esta ubicacion C:/xampp/htdocs/ en tu CMD
 ```sh
     git clone https://github.com/KevinKiroga/Document_Api.git
+```
+2. Ubicar el proyecto utilizando tu CMD con el siguiente comando
+```sh
+    cd Document_Api
+```
+3. Abrir el proyecto, puedes abrir el proyecto de manera manual pero si tienes visual stude code puede ejecutar el siguiente comando:
+```sh
+    code .
+```
+4. Despues debes instalar las dependencias de laravel utilizando composer con el siguiente comando:
+```sh
+    composer i
+```
+5. En el inicio del proyecto debes cambiar el nombre del .env.example por .env
+6. Luego debes ejecutar el siguiente comando
+```sh
+    php artisan key:generate
+```
+7. Ya cuando hagas el paso anterior ejecutaras las migraciones con el siguiente comando:
+```sh
+    php artisan migrate
+```
+te preguntara si deseas crear la base de datos tienes que teclear *yes*
+8. Luego ejecutaras los Seeder para la sobrecarga de datos
+```sh
+    php artisan db:seed
+```
+9. Ahora debes ejecutar el servidor con el siguiente comando:
+```sh
+    php artisan serve
+```
+10. Finalmente, si desdea los test es con el siguiente comando:
+```sh
+    php artisan test
 ```
