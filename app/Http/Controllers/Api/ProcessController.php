@@ -29,7 +29,7 @@ class ProcessController extends Controller
         // Manejo de Errores
         try {
             // Listar todos los procesos
-            $process = $this->processService->getAllProcesos();
+            $process = $this->processService->getAllProcess ();
 
             // Devuelve JSON 200
             return ApiResponse::success('Procesos', 200, $process);
@@ -47,7 +47,7 @@ class ProcessController extends Controller
     {
         // Manejo de Errores
         try {
-            $process = $this->processService->getProcesoById($id);
+            $process = $this->processService->getProcessById ($id);
 
             // Devuelve JSON 200
             return ApiResponse::success('Proceso', 200, $process);

@@ -28,7 +28,7 @@ class DocumentTypeController extends Controller
         // Manejo de errores
         try {
             // Crea una variable y almacena todos los datos del documento
-            $documentTypes = $this->documentTypeService->getAllTipoProceso();
+            $documentTypes = $this->documentTypeService->getAllDocumentType();
 
             // Devuelve el JSON 200
             return ApiResponse::success('Tipos de Procesos', 200, $documentTypes);
@@ -48,7 +48,7 @@ class DocumentTypeController extends Controller
         // Manejo de errores
         try {
             // Almacena un solo regitro de un documento en especifico
-            $documentType = $this->documentTypeService->getTipoProcesoById($id);
+            $documentType = $this->documentTypeService->getDocumentTypeById($id);
 
             // Devuelve el JSON 200
             return ApiResponse::success('Tipo de Proceso', 200, $documentType);

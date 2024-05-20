@@ -4,6 +4,6 @@ namespace App\Logic\Interfaces;
 
 interface ProcessServiceInterface 
 {
-    public function getAllProcesos();
-    public function getProcesoById($id);
+    public function getAllProcess();
+    public function getProcessById($id);
 }

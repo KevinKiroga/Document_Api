@@ -8,20 +8,20 @@ use App\Logic\Interfaces\DocumentTypeServiceInterface;
 
 class DocumentTypeService implements DocumentTypeServiceInterface
 {
-    protected $tipoProcesoRepository;
+    protected $documentTypeRepository;
 
-    public function __construct(DocumentTypeRepositoryInterface $tipoProcesoRepository)
+    public function __construct(DocumentTypeRepositoryInterface $tipoProcesoRepositoryI)
     {
-        $this->tipoProcesoRepository = $tipoProcesoRepository;
+        $this->documentTypeRepository = $tipoProcesoRepositoryI;
     }
 
-    public function getAllTipoProceso () 
+    public function getAllDocumentType () 
     {
-        return $this->tipoProcesoRepository->getAll();
+        return $this->documentTypeRepository->getAll();
     }
 
-    public function getTipoProcesoById ($id) 
+    public function getDocumentTypeById ($id) 
     {
-        return $this->tipoProcesoRepository->getById($id);
+        return $this->documentTypeRepository->getById($id);
     }
 }

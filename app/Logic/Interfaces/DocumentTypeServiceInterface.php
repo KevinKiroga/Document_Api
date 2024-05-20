@@ -4,6 +4,6 @@ namespace App\Logic\Interfaces;
 
 interface DocumentTypeServiceInterface
 {
-    public function getAllTipoProceso();
-    public function getTipoProcesoById($id);
+    public function getAllDocumentType();
+    public function getDocumentTypeById($id);
 }

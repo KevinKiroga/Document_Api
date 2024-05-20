@@ -7,20 +7,20 @@ use App\Logic\Interfaces\ProcessServiceInterface;
 
 class ProcessService implements ProcessServiceInterface
 {
-    protected $procesoRepository;
+    protected $processRepository;
 
-    public function __construct(ProcessRepositoryInterface $procesoRepository)
+    public function __construct(ProcessRepositoryInterface $procesoRepositoryI)
     {
-        $this->procesoRepository = $procesoRepository;
+        $this->processRepository = $procesoRepositoryI;
     }
 
-    public function getAllProcesos () 
+    public function getAllProcess () 
     {
-        return $this->procesoRepository->getAll();
+        return $this->processRepository->getAll();
     }
 
-    public function getProcesoById ($id)
+    public function getProcessById ($id)
     {
-        return $this->procesoRepository->getById($id);
+        return $this->processRepository->getById($id);
     }
 }
