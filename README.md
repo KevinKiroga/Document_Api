@@ -1,16 +1,12 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 </p>
 
+## Requisitos para ejecutar el proyecto
+- Visual Stude Code o un editor de codigo de su preferencia
+- Tener la base de datos, debes usar MySQL / XAMPP ya que el proyecto esta configurado con ese tipo de BD entonces debes instalarle la version mas reciente que es el 8.2.12 de PHP para que no halla conflicto
+- Instalar 7-Zip esto es para la gestion de archivo comprimidos
+- Instalar composer es para el gestor de dependencias y poder ejecutar laravel
+- Uso de git para poder clonar el proyecto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
