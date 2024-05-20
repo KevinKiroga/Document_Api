@@ -8,42 +8,61 @@
 - Instalar composer es para el gestor de dependencias y poder ejecutar laravel
 - Uso de git para poder clonar el proyecto
 
-## Configuracion del proyecto
-1. Debes clonar el respositorio debe utilizar git y ejecutar el siguiente comando en esta ubicacion C:/xampp/htdocs/ en tu CMD
+## Configuracion del proyecto Document_Api
+# 1. Clonar el Repositorio
+Debes usar git para clonar el repositorio. Abre tu CMD y valla al siguiente directorio `C:/xampp/htdocs/`. Luego, ejecuta el siguiente comando:
 ```sh
     git clone https://github.com/KevinKiroga/Document_Api.git
 ```
-2. Ubicar el proyecto utilizando tu CMD con el siguiente comando
+# 2. Acceder al proyecto
+Después de clonar, cambia la direccion y entrar carpeta del proyecto usando:
 ```sh
     cd Document_Api
 ```
-3. Abrir el proyecto, puedes abrir el proyecto de manera manual pero si tienes visual stude code puede ejecutar el siguiente comando:
+# 3. Abrir el proyecto
+Puedes abrir el proyecto manualmente en tu editor de código preferido. Si tienes Visual Studio Code instalado, puedes abrir el proyecto usando:
 ```sh
     code .
 ```
-4. Despues debes instalar las dependencias de laravel utilizando composer con el siguiente comando:
+# 4. nstalar Dependencias de Laravel
+Instala las dependencias necesarias de Laravel utilizando Composer:
 ```sh
     composer i
 ```
-5. En el inicio del proyecto debes cambiar el nombre del .env.example por .env
-6. Luego debes ejecutar el siguiente comando
+# 5. Configurar el Archivo de .env
+Renombra el archivo .env.example a .env:
+# 6. Generar la APP KEY
+Genera una nueva clave para la aplicación:
 ```sh
     php artisan key:generate
 ```
-7. Ya cuando hagas el paso anterior ejecutaras las migraciones con el siguiente comando:
+# 7. Ejecutar las Migraciones de la Base de Datos
+Ejecuta las migraciones de la base de datos:
 ```sh
     php artisan migrate
 ```
-te preguntara si deseas crear la base de datos tienes que teclear *yes*
-8. Luego ejecutaras los Seeder para la sobrecarga de datos
+Si se te pregunta si deseas crear la base de datos, escribe yes.
+# 8. Ejecutar los Seeder
+Ejecuta los seeders para cargar datos iniciales en la base de datos:
 ```sh
     php artisan db:seed
 ```
-9. Ahora debes ejecutar el servidor con el siguiente comando:
+# 9. Iniciar el Servidor de Desarrollo
+Inicia el servidor de Laravel:
 ```sh
     php artisan serve
 ```
-10. Finalmente, si desdea los test es con el siguiente comando:
+# 10. Ejecutar Pruebas (Opcional)
+Si deseas ejecutar pruebas, usa el siguiente comando:
 ```sh
     php artisan test
 ```
+
+## Estas serian las APIS
+| Método | Ruta                 | Descripción                            |
+|--------|----------------------|----------------------------------------|
+| GET    | http://127.0.0.1:8000/api/documento       | Obtiene todos los documentos          |
+| GET    | http://127.0.0.1:8000/api/documento/{id}  | Obtiene un documento por su ID        |
+| POST   | http://127.0.0.1:8000/api/documento      | Crea un nuevo documento               |
+| PUT    | http://127.0.0.1:8000/api/documento/{id}  | Actualiza un documento existente por su ID |
+| DELETE | http://127.0.0.1:8000/api/documento/{id}  | Elimina un documento por su ID        |
