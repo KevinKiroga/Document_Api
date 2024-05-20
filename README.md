@@ -61,8 +61,10 @@ Si deseas ejecutar pruebas, usa el siguiente comando:
 ## Estas serian las APIS
 | Método | Ruta                 | Descripción                            |
 |--------|----------------------|----------------------------------------|
+| POST   |http://127.0.0.1:8000/api/login       | Realiza el logueo de un usuario          |
 | GET    | http://127.0.0.1:8000/api/documento       | Obtiene todos los documentos          |
 | GET    | http://127.0.0.1:8000/api/documento/{id}  | Obtiene un documento por su ID        |
 | POST   | http://127.0.0.1:8000/api/documento      | Crea un nuevo documento               |
 | PUT    | http://127.0.0.1:8000/api/documento/{id}  | Actualiza un documento existente por su ID |
 | DELETE | http://127.0.0.1:8000/api/documento/{id}  | Elimina un documento por su ID        |
+| GET   |http://127.0.0.1:8000/api/login       | Cerrar sesion del usuario          |
