@@ -24,7 +24,7 @@ Puedes abrir el proyecto manualmente en tu editor de código preferido. Si tiene
 ```sh
     code .
 ```
-# 4. nstalar Dependencias de Laravel
+# 4. Instalar Dependencias de Laravel
 Instala las dependencias necesarias de Laravel utilizando Composer:
 ```sh
     composer i
