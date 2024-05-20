@@ -2,14 +2,14 @@
 
 namespace App\Logic\Services;
 
-use App\Infrastructure\Interfaces\ProcesoRepositoryInterface;
-use App\Logic\Interfaces\ProcesoServiceInterface;
+use App\Infrastructure\Interfaces\ProcessRepositoryInterface;
+use App\Logic\Interfaces\ProcessServiceInterface;
 
-class ProcesoService implements ProcesoServiceInterface
+class ProcessService implements ProcessServiceInterface
 {
     protected $procesoRepository;
 
-    public function __construct(ProcesoRepositoryInterface $procesoRepository)
+    public function __construct(ProcessRepositoryInterface $procesoRepository)
     {
         $this->procesoRepository = $procesoRepository;
     }

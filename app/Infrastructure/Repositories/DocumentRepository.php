@@ -5,24 +5,28 @@ namespace App\Infrastructure\Repositories;
 
 
 use App\Infrastructure\Interfaces\DocumentRepositoryInterface;
-use App\Models\DocDocumento;
+use App\Models\Document;
 
+/**
+ * Este repositorio es donde va a ir toda la interaccion con la BD
+ */
 class DocumentRepository implements DocumentRepositoryInterface
 {
     public function getAll()
     {
-        return DocDocumento::with('tipo_documento', 'proceso')->get();
+        return Document::with('tipo_documento', 'proceso')->get();
     }
 
     public function getById($id)
     {
-        return DocDocumento::with('tipo_documento', 'proceso')->findOrFail($id);
+        return Document::with('tipo_documento', 'proceso')->findOrFail($id);
     }
 
     public function deleteById($id)
     {
-        $document = DocDocumento::findOrFail($id);
-        if ($document) {
+        $document = Document::findOrFail($id);
+        if ($document) 
+        {
             $document->delete();
             return true;
         }
@@ -31,14 +35,14 @@ class DocumentRepository implements DocumentRepositoryInterface
 
     public function save(array $data)
     {
-        $document = new DocDocumento();
+        $document = new Document();
         $document->create($data);
         return $document;
     }
 
     public function update(array $data, $id)
     {
-        $document = DocDocumento::findOrFail($id);
+        $document = Document::findOrFail($id);
         $document->update($data);
         return $document;
     }

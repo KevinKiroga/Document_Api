@@ -2,7 +2,7 @@
 
 namespace App\Logic\Interfaces;
 
-interface ProcesoServiceInterface
+interface ProcessServiceInterface 
 {
     public function getAllProcesos();
     public function getProcesoById($id);

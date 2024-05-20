@@ -34,7 +34,8 @@ class AuthController extends Controller
     public function logout()
     {
         // Todos los token del usuario autenticado va a ser eliminado
-        auth()->user()->tokens()->delete();
+        $user = Auth::user();
+        $user->tokens()->delete();
 
         // Respuesta del JSON
         return response()->json([

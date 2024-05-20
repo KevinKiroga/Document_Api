@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        // Se crea un usuario de prubea con el esquema de factory
         \App\Models\User::factory()->create([
-            'name' => 'Test User', 
-            'email' => 'test@example.com',
-            'password' => bcrypt('test')
+            'name'      => 'usuario', 
+            'email'     => 'usuario@gmail.com',
+            'password'  => bcrypt('usuario')
         ]);
 
-        //$this->call(UserSeeder::class);
-        $this->call(ProProcesoSeeder::class);
-        $this->call(TipTipoDocSeeder::class);
+        $this->call(ProcessSeeder::class);
+        $this->call(DocumentTypeSeeder::class);
     }
 }

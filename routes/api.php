@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\DocumentoController;
-use App\Http\Controllers\Api\ProcesoController;
-use App\Http\Controllers\Api\TipoProcesoController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\DocumentController;
+
+use App\Http\Controllers\Api\DocumentTypeController;
+use App\Http\Controllers\Api\ProcessController;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 /*
@@ -18,21 +20,27 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-/*Route::get('/user', function (Request $request) {
-    return $request->user();
-});*/
 
-// Ruta para la API de logueo
+
+// Ruta para la API de loguear un usuairo
 Route::post('/login', [AuthController::class, 'login']);
 
+/**
+ * Grupo de rutas protegida restringiendo el acceso 
+ * si el usuario no se ha logueado
+ */
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::apiResource('documento', DocumentoController::class);
-    Route::get('proceso', [ProcesoController::class, 'index']);
-    Route::get('proceso/{id}', [ProcesoController::class, 'show']);
+    // Ruta para la API del CRUD de un documento
+    Route::apiResource('documento', DocumentController::class);
 
-    Route::get('tipo', [TipoProcesoController::class, 'index']);
-    Route::get('tipo/{id}', [TipoProcesoController::class, 'show']);
+    // Ruta para la API para obtener y mostrar los proceso
+    Route::get('proceso', [ProcessController::class, 'index']);
+    Route::get('proceso/{id}', [ProcessController::class, 'show']);
+
+    // Ruta para la API para obtener y mostrar los tipos de documentos
+    Route::get('tipo', [DocumentTypeController::class, 'index']);
+    Route::get('tipo/{id}', [DocumentTypeController::class, 'show']);
 
 
     // Ruta para la API de cerrar sesion
