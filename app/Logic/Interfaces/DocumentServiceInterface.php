@@ -8,4 +8,5 @@ interface DocumentServiceInterface
     public function getDocumentById($id);
     public function deleteDocumentById($id);
     public function createDocument(array $data);
+    public function updateDocument(array $data, $id);
 }

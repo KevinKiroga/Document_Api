@@ -9,7 +9,7 @@ use App\Models\DocDocumento;
 
 class DocumentRepository implements DocumentRepositoryInterface
 {
-    public function getAll() 
+    public function getAll()
     {
         return DocDocumento::with('tipo_documento', 'proceso')->get();
     }
@@ -29,11 +29,18 @@ class DocumentRepository implements DocumentRepositoryInterface
         return false;
     }
 
-    public function save (array $data)
+    public function save(array $data)
     {
-        $document = DocDocumento::create($data);
+        $document = new DocDocumento();
+        $document->create($data);
         return $document;
     }
 
+    public function update(array $data, $id)
+    {
+        $document = DocDocumento::findOrFail($id);
+        $document->update($data);
+        return $document;
+    }
 
-} 
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BusinessObject\Dtos\Requests;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -23,7 +23,7 @@ class DocumentoRequest extends FormRequest
     {
         return [
             'doc_nombre' => 'required',
-            'doc_codigo' => 'required|unique:doc_documento,doc_codigo',
+            'doc_codigo' => 'unique:doc_documento,doc_codigo',
             'doc_contenido' => 'required',
             'doc_id_tipo' => 'required',
             'doc_id_proceso' => 'required',

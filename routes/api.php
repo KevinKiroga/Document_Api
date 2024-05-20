@@ -27,9 +27,13 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::resource('documento', DocumentoController::class);
+    Route::apiResource('documento', DocumentoController::class);
     Route::get('proceso', [ProcesoController::class, 'index']);
+    Route::get('proceso/{id}', [ProcesoController::class, 'show']);
+
     Route::get('tipo', [TipoProcesoController::class, 'index']);
+    Route::get('tipo/{id}', [TipoProcesoController::class, 'show']);
+
 
     // Ruta para la API de cerrar sesion
     Route::get('/logout', [AuthController::class, 'logout']);

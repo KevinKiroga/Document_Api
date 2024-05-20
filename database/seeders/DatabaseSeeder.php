@@ -18,7 +18,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(UserSeeder::class);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Test User', 
+            'email' => 'test@example.com',
+            'password' => bcrypt('test')
+        ]);
+
+        //$this->call(UserSeeder::class);
         $this->call(ProProcesoSeeder::class);
         $this->call(TipTipoDocSeeder::class);
     }

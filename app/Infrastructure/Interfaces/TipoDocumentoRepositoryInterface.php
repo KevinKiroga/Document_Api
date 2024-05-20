@@ -2,7 +2,8 @@
 
 namespace App\Infrastructure\Interfaces;
 
-interface TipoProcesoRepositoryInterface
+interface TipoDocumentoRepositoryInterface
 {
     public function getAll();
+    public function getById($id);
 }

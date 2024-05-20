@@ -11,4 +11,9 @@ class ProcesoRepository implements ProcesoRepositoryInterface
     {
         return ProProceso::all();
     }
+
+    public function getById($id)
+    {
+        return ProProceso::findOrFail($id);
+    }
 }

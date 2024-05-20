@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BusinessObject\Dtos\Responses;
+namespace App\Http\Responses;
 
 class ApiResponse {
     public static function success ($message, $statusCode, $data = []) 

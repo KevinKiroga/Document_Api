@@ -8,4 +8,5 @@ interface DocumentRepositoryInterface
     public function getById($id);
     public function deleteById($id);
     public function save(array $data);
+    public function update (array $data, $id);
 }

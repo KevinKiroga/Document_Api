@@ -18,4 +18,9 @@ class ProcesoService implements ProcesoServiceInterface
     {
         return $this->procesoRepository->getAll();
     }
+
+    public function getProcesoById ($id)
+    {
+        return $this->procesoRepository->getById($id);
+    }
 }

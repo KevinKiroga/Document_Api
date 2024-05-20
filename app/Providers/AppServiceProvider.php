@@ -5,16 +5,18 @@ namespace App\Providers;
 
 use App\Infrastructure\Interfaces\DocumentRepositoryInterface;
 use App\Infrastructure\Interfaces\ProcesoRepositoryInterface;
+use App\Infrastructure\Interfaces\TipoDocumentoRepositoryInterface;
 use App\Infrastructure\Interfaces\TipoProcesoRepositoryInterface;
 use App\Infrastructure\Repositories\DocumentRepository;
 use App\Infrastructure\Repositories\ProcesoRepository;
+use App\Infrastructure\Repositories\TipoDocumentoRepository;
 use App\Infrastructure\Repositories\TipoProcesoRepository;
 use App\Logic\Interfaces\DocumentServiceInterface;
 use App\Logic\Interfaces\ProcesoServiceInterface;
-use App\Logic\Interfaces\TipoProcesoServiceInterface;
+use App\Logic\Interfaces\TipoDocumentoServiceInterface;
 use App\Logic\Services\DocumentService;
 use App\Logic\Services\ProcesoService;
-use App\Logic\Services\TipoProcesoService;
+use App\Logic\Services\TipoDocumentoService;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -31,8 +33,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ProcesoRepositoryInterface::class, ProcesoRepository::class);
         $this->app->bind(ProcesoServiceInterface::class, ProcesoService::class);
 
-        $this->app->bind(TipoProcesoRepositoryInterface::class, TipoProcesoRepository::class);
-        $this->app->bind(TipoProcesoServiceInterface::class, TipoProcesoService::class);
+        $this->app->bind(TipoDocumentoRepositoryInterface::class, TipoDocumentoRepository::class);
+        $this->app->bind(TipoDocumentoServiceInterface::class, TipoDocumentoService::class);
     }
 
     /**
