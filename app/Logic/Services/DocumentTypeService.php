@@ -3,11 +3,8 @@
 namespace App\Logic\Services;
 
 use App\Infrastructure\Interfaces\DocumentTypeRepositoryInterface;
-use App\Infrastructure\Repositories\DocumentTypeRepository;
-use App\Infrastructure\Repositories\TipoDocumentoRepository;
-use App\Logic\Interfaces\DocumentServiceInterface;
 use App\Logic\Interfaces\DocumentTypeServiceInterface;
-use App\Logic\Interfaces\TipoDocumentoServiceInterface;
+
 
 class DocumentTypeService implements DocumentTypeServiceInterface
 {

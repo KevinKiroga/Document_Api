@@ -6,7 +6,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\ApiResponse;
 use App\Logic\Interfaces\DocumentTypeServiceInterface;
-use App\Logic\Interfaces\TipoDocumentoServiceInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Exception;
 

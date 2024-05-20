@@ -6,7 +6,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\ApiResponse;
 
-use App\Logic\Interfaces\ProcesoServiceInterface;
 use App\Logic\Interfaces\ProcessServiceInterface;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
