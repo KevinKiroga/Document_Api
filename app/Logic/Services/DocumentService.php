@@ -80,10 +80,14 @@ class DocumentService implements DocumentServiceInterface
         $process = $this->processRepository->getById($data['doc_id_proceso']);
         $prefixProcess = $process->pro_prefijo;
 
+        $document = $this->documentRepository->getById($id);
+        $codeCalculate = $document->doc_codigo;
 
-        $codeCalculate = $this->calculateCodeDocument($prefixProcess, $prefixDocumentTyoe);
+        if ($document->doc_id_tipo != $documentType->id || $document->doc_id_proceso != $process->id ) {
+            $codeCalculate = $this->calculateCodeDocument($prefixProcess, $prefixDocumentTyoe);  
+        }
+
         $data['doc_codigo'] = $codeCalculate;
-
         return $this->documentRepository->update($data, $id);
     }
 
