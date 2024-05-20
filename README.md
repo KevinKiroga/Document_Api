@@ -8,5 +8,9 @@
 - Instalar composer es para el gestor de dependencias y poder ejecutar laravel
 - Uso de git para poder clonar el proyecto
 
-
-
+## Configuracion del proyecto
+1. Clone el repositorio
+Para clonarlo debe utilizar git y ejecutar el siguiente comando en xampp/htdocs/
+```sh
+    git clone https://github.com/KevinKiroga/Document_Api.git
+```
