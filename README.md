@@ -47,7 +47,7 @@ Ejecuta los seeders para cargar datos iniciales en la base de datos:
 ```sh
     php artisan db:seed
 ```
-## 9. Iniciar el Servidor de Desarrollo
+## 9. Iniciar el Servidor
 Inicia el servidor de Laravel:
 ```sh
     php artisan serve
