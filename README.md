@@ -57,6 +57,11 @@ Si deseas ejecutar pruebas, usa el siguiente comando:
 ```sh
     php artisan test
 ```
+## Auntenticacion del usuario
+{
+    "email": "usuario@gmail.com",
+    "password": "usuario"
+}
 
 ## Estas serian las APIS
 | Método | Ruta                 | Descripción                            |
