@@ -3,7 +3,7 @@
 
 ## Requisitos para ejecutar el proyecto
 - Visual Stude Code o un editor de codigo de su preferencia
-- Tener la base de datos, debes usar MySQL / XAMPP ya que el proyecto esta configurado con ese tipo de BD entonces debes instalarle la version mas reciente que es el 8.2.12 de PHP para que no halla conflicto
+- Instalar MySQL / XAMPP ya que el proyecto esta configurado con ese tipo de BD entonces debes instalarle la version mas reciente que es el 8.2.12 de PHP para que no halla conflicto.
 - Instalar 7-Zip esto es para la gestion de archivo comprimidos
 - Instalar composer es para el gestor de dependencias y poder ejecutar laravel
 - Uso de git para poder clonar el proyecto
