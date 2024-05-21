@@ -58,10 +58,12 @@ Si deseas ejecutar pruebas, usa el siguiente comando:
     php artisan test
 ```
 ## Auntenticacion del usuario
+```json
 {
-    "email": "usuario@gmail.com",
-    "password": "usuario"
+  "email": "usuario@gmail.com",
+  "password": "usuario"
 }
+```
 
 ## Estas serian las APIS
 | Método | Ruta                 | Descripción                            |
